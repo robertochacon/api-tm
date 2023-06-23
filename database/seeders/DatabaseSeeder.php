@@ -23,9 +23,9 @@ class DatabaseSeeder extends Seeder
         
         //adding authors
         DB::table('authors')->insert([
-            ['name' => 'Carmen Natalia'],
-            ['name' => 'Manuel de Jesús Galván'],
-            ['name' => 'Mario Vargas Llosa']
+            ['name' => 'Carmen Natalia','image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTa5YmtFECCdxxUgk_zaeHMC8Y03UoamMCdWIpZIFxQfVWBDQjx1U5usDQoTGV2SShuXI&usqp=CAU'],
+            ['name' => 'Manuel de Jesús Galván','image' => 'https://www.buscabiografias.com/img/people/Manuel_de_Jesus_Galvan.jpg'],
+            ['name' => 'Mario Vargas Llosa','image' => 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg']
         ]);
 
         //adding categories
@@ -36,9 +36,9 @@ class DatabaseSeeder extends Seeder
 
         //adding books
         DB::table('books')->insert([
-            ['author_id' => 1,'category_id' => 1,'title' => 'La victoria','description' => ' La novela, originada en 1942, no narra una historia nueva e innovadora, sino el amor que sienten dos hermanos por una misma mujer.'],
-            ['author_id' => 2,'category_id' => 1,'title' => 'Enriquillo','description' => 'Enriquillo es una novela histórica dominicana escrita por Manuel de Jesús Galván y publicada entre 1879 y 1882. Ubicada en el siglo XVI.'],
-            ['author_id' => 3,'category_id' => 2,'title' => 'La fiesta del Chivo','description' => 'La fiesta del Chivo es una novela publicada en el año 2000 del escritor peruano-español Mario Vargas Llosa. El libro tiene lugar en República Dominicana.'],
+            ['author_id' => 1,'category_id' => 1,'title' => 'La victoria','description' => ' La novela, originada en 1942, no narra una historia nueva e innovadora, sino el amor que sienten dos hermanos por una misma mujer.','image' => 'https://www.cuestalibros.com/content/images/thumbs/0119619_la-victoria_550.jpeg'],
+            ['author_id' => 2,'category_id' => 1,'title' => 'Enriquillo','description' => 'Enriquillo es una novela histórica dominicana escrita por Manuel de Jesús Galván y publicada entre 1879 y 1882. Ubicada en el siglo XVI.','image' => 'https://www.cuestalibros.com/content/images/thumbs/0097261_6227920-h.JPG_550.jpeg'],
+            ['author_id' => 3,'category_id' => 2,'title' => 'La fiesta del Chivo','description' => 'La fiesta del Chivo es una novela publicada en el año 2000 del escritor peruano-español Mario Vargas Llosa. El libro tiene lugar en República Dominicana.','image' => 'https://proceso.com.do/wp-content/uploads/2023/04/La-fiesta-del-Chivo.jpg'],
         ]);
 
     }

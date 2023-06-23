@@ -150,6 +150,10 @@
                                             "type": "string",
                                             "example": "Example"
                                         },
+                                        "image": {
+                                            "type": "string",
+                                            "example": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"
+                                        },
                                         "created_at": {
                                             "type": "string",
                                             "example": "2023-02-23T00:09:16.000000Z"
@@ -207,6 +211,10 @@
                                         "type": "string",
                                         "format": "string",
                                         "example": "Name"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "example": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"
                                     }
                                 },
                                 "type": "object"
@@ -275,6 +283,10 @@
                                             "type": "string",
                                             "example": "Example"
                                         },
+                                        "image": {
+                                            "type": "string",
+                                            "example": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"
+                                        },
                                         "created_at": {
                                             "type": "string",
                                             "example": "2023-02-23T00:09:16.000000Z"
@@ -342,6 +354,10 @@
                                         "type": "string",
                                         "format": "string",
                                         "example": "Name"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "example": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"
                                     }
                                 },
                                 "type": "object"
@@ -440,6 +456,14 @@
                                             "type": "number",
                                             "example": 1
                                         },
+                                        "author": {
+                                            "type": "string",
+                                            "example": "author"
+                                        },
+                                        "category": {
+                                            "type": "string",
+                                            "example": "category"
+                                        },
                                         "title": {
                                             "type": "string",
                                             "example": "title"
@@ -448,13 +472,9 @@
                                             "type": "string",
                                             "example": "description"
                                         },
-                                        "author": {
+                                        "image": {
                                             "type": "string",
-                                            "example": "author"
-                                        },
-                                        "category": {
-                                            "type": "string",
-                                            "example": "category"
+                                            "example": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"
                                         },
                                         "created_at": {
                                             "type": "string",
@@ -524,6 +544,10 @@
                                     "description": {
                                         "type": "string",
                                         "example": "description"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "example": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"
                                     }
                                 },
                                 "type": "object"
@@ -588,6 +612,14 @@
                                             "type": "number",
                                             "example": 1
                                         },
+                                        "author": {
+                                            "type": "string",
+                                            "example": "author"
+                                        },
+                                        "category": {
+                                            "type": "string",
+                                            "example": "category"
+                                        },
                                         "title": {
                                             "type": "string",
                                             "example": "title"
@@ -596,13 +628,9 @@
                                             "type": "string",
                                             "example": "description"
                                         },
-                                        "author": {
+                                        "image": {
                                             "type": "string",
-                                            "example": "author"
-                                        },
-                                        "category": {
-                                            "type": "string",
-                                            "example": "category"
+                                            "example": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"
                                         },
                                         "created_at": {
                                             "type": "string",
@@ -682,6 +710,10 @@
                                     "description": {
                                         "type": "string",
                                         "example": "description"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "example": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"
                                     }
                                 },
                                 "type": "object"
