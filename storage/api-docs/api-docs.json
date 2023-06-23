@@ -126,6 +126,934 @@
                     }
                 }
             }
+        },
+        "/api/authors": {
+            "get": {
+                "tags": [
+                    "Authors"
+                ],
+                "summary": "All authors",
+                "description": "All authors",
+                "operationId": "all_authors",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Example"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Authors"
+                ],
+                "summary": "Store a authors",
+                "description": "Store a authors",
+                "operationId": "store_authors",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "Name"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/authors/{id}": {
+            "get": {
+                "tags": [
+                    "Authors"
+                ],
+                "summary": "See a authors",
+                "description": "See a authors",
+                "operationId": "watch_authors",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Example"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Authors"
+                ],
+                "summary": "Update a authors",
+                "description": "Update a authors",
+                "operationId": "update_authors",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "Name"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Authors"
+                ],
+                "summary": "Delete a authors",
+                "description": "Delete a authors",
+                "operationId": "delete_authors",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/books": {
+            "get": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "All books",
+                "description": "All books",
+                "operationId": "all_books",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "title": {
+                                            "type": "string",
+                                            "example": "title"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "example": "description"
+                                        },
+                                        "author": {
+                                            "type": "string",
+                                            "example": "author"
+                                        },
+                                        "category": {
+                                            "type": "string",
+                                            "example": "category"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "Store a books",
+                "description": "Store a books",
+                "operationId": "store_books",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title"
+                                ],
+                                "properties": {
+                                    "author_id": {
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "category_id": {
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "example": "title"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "description"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/books/{id}": {
+            "get": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "See a books",
+                "description": "See a books",
+                "operationId": "watch_books",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "title": {
+                                            "type": "string",
+                                            "example": "title"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "example": "description"
+                                        },
+                                        "author": {
+                                            "type": "string",
+                                            "example": "author"
+                                        },
+                                        "category": {
+                                            "type": "string",
+                                            "example": "category"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "Update a books",
+                "description": "Update a books",
+                "operationId": "update_books",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "author_id": {
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "category_id": {
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "example": "title"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "description"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "Delete a books",
+                "description": "Delete a books",
+                "operationId": "delete_books",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "All categories",
+                "description": "All categories",
+                "operationId": "all_categories",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Example"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Store a categories",
+                "description": "Store a categories",
+                "operationId": "store_categories",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "Name"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/categories/{id}": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "See a categories",
+                "description": "See a categories",
+                "operationId": "watch_categories",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Example"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T00:09:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Update a categories",
+                "description": "Update a categories",
+                "operationId": "update_categories",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "Name"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Delete a categories",
+                "description": "Delete a categories",
+                "operationId": "delete_categories",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
         }
     },
     "components": {
