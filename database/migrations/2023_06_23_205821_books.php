@@ -21,6 +21,7 @@ class Books extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }

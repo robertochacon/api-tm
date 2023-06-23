@@ -20,10 +20,11 @@ class BooksController extends Controller
      *         description="OK",
      *         @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
-     *              @OA\Property(property="title", type="string", example="title"),
-     *              @OA\Property(property="description", type="string", example="description"),
      *              @OA\Property(property="author", type="string", example="author"),
      *              @OA\Property(property="category", type="string", example="category"),
+     *              @OA\Property(property="title", type="string", example="title"),
+     *              @OA\Property(property="description", type="string", example="description"),
+     *              @OA\Property(property="image", type="string", example="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
      *         )
@@ -62,10 +63,11 @@ class BooksController extends Controller
      *         description="OK",
      *         @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
-     *              @OA\Property(property="title", type="string", example="title"),
-     *              @OA\Property(property="description", type="string", example="description"),
      *              @OA\Property(property="author", type="string", example="author"),
      *              @OA\Property(property="category", type="string", example="category"),
+     *              @OA\Property(property="title", type="string", example="title"),
+     *              @OA\Property(property="description", type="string", example="description"),
+     *              @OA\Property(property="image", type="string", example="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
      *         )
@@ -104,6 +106,7 @@ class BooksController extends Controller
      *              @OA\Property(property="category_id", type="number", example="1"),
      *              @OA\Property(property="title", type="string", example="title"),
      *              @OA\Property(property="description", type="string", example="description"),
+     *              @OA\Property(property="image", type="string", example="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"),
      *         ),
      *      ),
      *     @OA\Response(
@@ -144,6 +147,7 @@ class BooksController extends Controller
      *              @OA\Property(property="category_id", type="number", example="1"),
      *              @OA\Property(property="title", type="string", example="title"),
      *              @OA\Property(property="description", type="string", example="description"),
+     *              @OA\Property(property="image", type="string", example="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFETSM4Qtu1n35k9yu_5CEuY7cWoWPXsDmBg&usqp=CAU"),
      *         ),
      *      ),
      *     @OA\Response(

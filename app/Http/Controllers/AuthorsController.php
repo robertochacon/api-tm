@@ -21,6 +21,7 @@ class AuthorsController extends Controller
      *         @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
      *              @OA\Property(property="name", type="string", example="Example"),
+     *              @OA\Property(property="image", type="string", example="https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
      *         )
@@ -60,6 +61,7 @@ class AuthorsController extends Controller
      *         @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
      *              @OA\Property(property="name", type="string", example="Example"),
+     *              @OA\Property(property="image", type="string", example="https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
      *         )
@@ -95,6 +97,7 @@ class AuthorsController extends Controller
      *         @OA\JsonContent(
      *            required={"name"},
      *            @OA\Property(property="name", type="string", format="string", example="Name"),
+     *            @OA\Property(property="image", type="string", example="https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"),
      *         ),
      *      ),
      *     @OA\Response(
@@ -132,6 +135,7 @@ class AuthorsController extends Controller
      *         @OA\JsonContent(
      *            required={"name"},
      *            @OA\Property(property="name", type="string", format="string", example="Name"),
+     *            @OA\Property(property="image", type="string", example="https://upload.wikimedia.org/wikipedia/commons/b/bf/Mario_Vargas_Llosa_%28crop_2%29.jpg"),
      *         ),
      *      ),
      *     @OA\Response(
