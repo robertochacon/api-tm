@@ -89,10 +89,10 @@ class UserController extends Controller
     /**
     * @OA\Post(
     * path="/api/users",
-    * operationId="Register",
-    * tags={"Register"},
-    * summary="User Register",
-    * description="User Register here",
+    * operationId="register_user",
+    * tags={"Users"},
+    * summary="Register user",
+    * description="Register user here",
     *      @OA\RequestBody(
     *         required=true,
     *         @OA\JsonContent(
