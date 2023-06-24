@@ -57,13 +57,10 @@ class AuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        $user = User::where('id',auth()->user()['id'])->first();
-        $datos['token'] = $token;
-        $datos['user'] = $user;
-        return $this->respondWithToken($datos);
+        return $this->respondWithToken($token);
     }
 
     /**
@@ -129,6 +126,7 @@ class AuthController extends Controller
     *               @OA\Property(property="name", type="string"),
     *               @OA\Property(property="email", type="string"),
     *               @OA\Property(property="password", type="string"),
+    *               @OA\Property(property="role", type="string", example="admin"),
     *         ),
     *      ),
     *      @OA\Response(

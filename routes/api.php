@@ -22,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group([
-    'middleware' => 'api',
+    'middleware' => 'auth:api',
     // 'prefix' => 'auth'
 ], function ($router) {
     Route::post('login', [AuthController::class, 'login']);
@@ -51,5 +51,12 @@ Route::group([
     Route::post('/books/', [BooksController::class, 'register']);
     Route::put('/books/{id}/', [BooksController::class, 'update']);
     Route::delete('/books/{id}/', [BooksController::class, 'delete']);
+
+    //users
+    Route::get('/users/', [UserController::class, 'index']);
+    Route::get('/users/{id}/', [UserController::class, 'watch']);
+    Route::post('/users/', [UserController::class, 'register']);
+    Route::put('/users/{id}/', [UserController::class, 'update']);
+    Route::delete('/users/{id}/', [UserController::class, 'delete']);
 
 });
