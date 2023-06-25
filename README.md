@@ -12,5 +12,5 @@
 - Paso 9. Ejecutar el comando *php artisan serve*.
 
 ## Documentación
-- Acedder a la ruta http://127.0.0.1:8000/api/documentation
+- Acceder a la ruta http://127.0.0.1:8000/api/documentation para ver el api documentada.
 
