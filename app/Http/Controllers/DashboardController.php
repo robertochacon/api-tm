@@ -32,11 +32,11 @@ class DashboardController extends Controller
      *      )
      * )
      */
-    public function index(){
+    public function all(){
         $data['categories'] = count(Categories::all());
         $data['authors'] = count(Authors::all());
         $data['books'] = count(Books::all());
-        $data['Users'] = count(User::all());
+        $data['users'] = count(User::all());
         return response()->json(["data"=>$data],200);
     }
 }
