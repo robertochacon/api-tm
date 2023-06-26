@@ -917,12 +917,7 @@
                             }
                         }
                     }
-                },
-                "security": [
-                    {
-                        "apiAuth": []
-                    }
-                ]
+                }
             },
             "post": {
                 "tags": [

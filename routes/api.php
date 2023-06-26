@@ -25,6 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
+Route::get('/categories/', [CategoriesController::class, 'index']);
 Route::post('/books/search/', [BooksController::class, 'search']);
 
 Route::group([
@@ -46,7 +47,6 @@ Route::group([
     Route::delete('/authors/{id}/', [AuthorsController::class, 'delete']);
 
     //categories
-    Route::get('/categories/', [CategoriesController::class, 'index']);
     Route::get('/categories/{id}/', [CategoriesController::class, 'watch']);
     Route::post('/categories/', [CategoriesController::class, 'register']);
     Route::put('/categories/{id}/', [CategoriesController::class, 'update']);

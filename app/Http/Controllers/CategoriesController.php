@@ -12,7 +12,6 @@ class CategoriesController extends Controller
      *     path="/api/categories",
      *      operationId="all_categories",
      *     tags={"Categories"},
-     *     security={{ "apiAuth": {} }},
      *     summary="All categories",
      *     description="All categories",
      *     @OA\Response(
