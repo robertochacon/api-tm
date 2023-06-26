@@ -49,7 +49,6 @@ class BooksController extends Controller
      *     path="/api/books/search",
      *      operationId="all_books_search",
      *     tags={"Books"},
-     *     security={{ "apiAuth": {} }},
      *     summary="Search books",
      *     description="Search books",
      *      @OA\RequestBody(

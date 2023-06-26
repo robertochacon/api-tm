@@ -651,12 +651,7 @@
                             }
                         }
                     }
-                },
-                "security": [
-                    {
-                        "apiAuth": []
-                    }
-                ]
+                }
             }
         },
         "/api/books/{id}": {

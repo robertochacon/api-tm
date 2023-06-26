@@ -25,6 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
+Route::post('/books/search/', [BooksController::class, 'search']);
 
 Route::group([
     'middleware' => 'auth:api',
@@ -53,7 +54,6 @@ Route::group([
 
     //books
     Route::get('/books/', [BooksController::class, 'index']);
-    Route::post('/books/search/', [BooksController::class, 'search']);
     Route::get('/books/{id}/', [BooksController::class, 'watch']);
     Route::post('/books/', [BooksController::class, 'register']);
     Route::put('/books/{id}/', [BooksController::class, 'update']);
