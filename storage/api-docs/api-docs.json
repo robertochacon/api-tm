@@ -587,6 +587,78 @@
                 ]
             }
         },
+        "/api/books/search": {
+            "post": {
+                "tags": [
+                    "Books"
+                ],
+                "summary": "Search books",
+                "description": "Search books",
+                "operationId": "all_books_search",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "search"
+                                ],
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "example": "La victoria"
+                                    },
+                                    "category_id": {
+                                        "type": "number",
+                                        "example": "2"
+                                    },
+                                    "from": {
+                                        "type": "string",
+                                        "example": ""
+                                    },
+                                    "to": {
+                                        "type": "string",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
         "/api/books/{id}": {
             "get": {
                 "tags": [

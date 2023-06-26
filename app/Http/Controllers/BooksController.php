@@ -45,6 +45,64 @@ class BooksController extends Controller
     }
 
     /**
+     * @OA\Post (
+     *     path="/api/books/search",
+     *      operationId="all_books_search",
+     *     tags={"Books"},
+     *     security={{ "apiAuth": {} }},
+     *     summary="Search books",
+     *     description="Search books",
+     *      @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *            required={"search"},
+     *              @OA\Property(property="title", type="string", example="La victoria"),
+     *              @OA\Property(property="category_id", type="number", example="2"),
+     *              @OA\Property(property="from", type="string", example=""),
+     *              @OA\Property(property="to", type="string", example=""),
+     *         ),
+     *      ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="OK",
+     *         @OA\JsonContent()
+     *     ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="NOT FOUND",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="No query results for model [App\\Models\\Cliente] #id"),
+     *          )
+     *      )
+     * )
+     */
+    public function search(Request $request)
+    {
+
+        $title = $request->title;
+        $category_id = $request->category_id;
+        $qfrom = $request->from;
+        $qto = $request->to;
+
+        $books = Books::with(['author','category']);
+
+        if ($title != null) {
+            $books = $books->where('title', 'like', '%'. $title .'%')->get();
+        }
+
+        if ($category_id != null) {
+            $books = $books->where('category_id', $category_id);
+        }
+
+        if ($qfrom != null && $qto != null ) {
+            $books = $books->whereBetween('created_at', [$qfrom, $qto]);
+        }
+
+        return response()->json(["data"=>$books],200);
+    }
+
+
+    /**
      * @OA\Get (
      *     path="/api/books/{id}",
      *     operationId="watch_books",
