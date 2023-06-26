@@ -86,18 +86,22 @@ class BooksController extends Controller
         $books = Books::with(['author','category']);
 
         if ($title != null) {
-            $books = $books->where('title', 'like', '%'. $title .'%')->get();
+            $books = $books->where('title', 'like', '%'. $title .'%');
         }
 
         if ($category_id != null) {
             $books = $books->where('category_id', $category_id);
         }
 
-        if ($qfrom != null && $qto != null ) {
+        if ($qfrom != null && $qto != null) {
             $books = $books->whereBetween('created_at', [$qfrom, $qto]);
         }
 
-        return response()->json(["data"=>$books],200);
+        if ($title != null && $category_id != null && $qfrom != null && $qto != null) {
+            $books = $books->pagination(10);
+        }
+
+        return response()->json(["data"=>$books->get()],200);
     }
 
 
