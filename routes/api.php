@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes

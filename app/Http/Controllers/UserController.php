@@ -91,6 +91,7 @@ class UserController extends Controller
     * path="/api/users",
     * operationId="register_user",
     * tags={"Users"},
+    * security={{ "apiAuth": {} }},
     * summary="Register user",
     * description="Register user here",
     *      @OA\RequestBody(
